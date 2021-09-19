@@ -1,2 +1,3 @@
-# testRepo
-This Repo is make as a test!
+# GCP_TERRFORM CONNETION
+
+Utilizing connection to get GCP and terraform working!
