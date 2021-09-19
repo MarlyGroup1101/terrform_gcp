@@ -39,6 +39,23 @@ resource "google_compute_instance" "default1" {
 
   }
 }
+
+resource "google_compute_instance" "default2" {
+  name         = "demo322"
+  machine_type = "f1-micro"
+  zone         = "us-west2-b"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+
+  network_interface {
+    network = "default"
+
+  }
+}
 #works and can create VM in play environments
 
 module "agent_policy" {
