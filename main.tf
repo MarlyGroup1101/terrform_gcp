@@ -4,7 +4,7 @@ variable "GOOGLE_CREDENTIALS" {
 }
 
 provider "google" {
-  credentials = ${var.GOOGLE_CREDENTIALS}
+  credentials = var.GOOGLE_CREDENTIALS
   project     = "just-amp-325919"
   region      = "us-west4"
 
