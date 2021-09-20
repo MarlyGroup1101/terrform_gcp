@@ -1,12 +1,17 @@
+variable "google_credentials" {
+  description = "the contents of a service account key file in JSON format."
+  type = string
+}
+
 provider "google" {
-  credentials = file("service-account.json")
+  credentials = var.google_credentials
   project     = "just-amp-325919"
   region      = "us-west4"
 
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "demo1"
+  name         = "cred_cloud"
   machine_type = "f1-micro"
   zone         = "us-west4-b"
 
@@ -23,39 +28,8 @@ resource "google_compute_instance" "vm_instance" {
   }
 }
 
-resource "google_compute_instance" "default1" {
-  name         = "demo3"
-  machine_type = "f1-micro"
-  zone         = "us-west2-b"
 
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-9"
-    }
-  }
 
-  network_interface {
-    network = "default"
-
-  }
-}
-
-resource "google_compute_instance" "default2" {
-  name         = "demo322"
-  machine_type = "f1-micro"
-  zone         = "us-west2-b"
-
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-9"
-    }
-  }
-
-  network_interface {
-    network = "default"
-
-  }
-}
 #works and can create VM in play environments
 
 module "agent_policy" {
