@@ -1,14 +1,3 @@
-variable "GOOGLE_CREDENTIALS" {
-  description = "the contents of a service account key file in JSON format."
-  type = string
-}
-
-provider "google" {
-  credentials = var.GOOGLE_CREDENTIALS
-  project     = "just-amp-325919"
-  region      = "us-west4"
-
-}
 
 resource "google_compute_instance" "vm_instance" {
   name         = "cred_cloud"
@@ -27,8 +16,6 @@ resource "google_compute_instance" "vm_instance" {
 
   }
 }
-
-
 
 #works and can create VM in play environments
 
