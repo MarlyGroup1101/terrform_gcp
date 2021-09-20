@@ -1,10 +1,10 @@
-variable "google_credentials" {
+variable "GOOGLE_CREDENTIALS" {
   description = "the contents of a service account key file in JSON format."
   type = string
 }
 
 provider "google" {
-  credentials = ${var.google_credentials}
+  credentials = ${var.GOOGLE_CREDENTIALS}
   project     = "just-amp-325919"
   region      = "us-west4"
 
