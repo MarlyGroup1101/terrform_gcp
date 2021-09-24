@@ -16,20 +16,4 @@ resource "google_compute_instance" "vm_instance" {
     network       = "default"
 
   }
-  # We connect to our instance via Terraform and remotely executes our script using SSH
-  provisioner "remote-exec" {
-    script = "agent.sh"
 
-    connection {
-      type        = "ssh"
-      host        = google_compute_address.static.address
-      user        = var.username
-      private_key = file("ssh")
-    }
-  }
-}
-
-# We create a public IP address for our google compute instance to utilize
-resource "google_compute_address" "static" {
-  name = "vm-public-address"
-}
