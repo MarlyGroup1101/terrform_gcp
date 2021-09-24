@@ -15,9 +15,7 @@ resource "google_compute_instance" "vm_instance" {
   network_interface {
     network       = "default"
 
-
   }
-
   # We connect to our instance via Terraform and remotely executes our script using SSH
   provisioner "remote-exec" {
     script = var.script_path
