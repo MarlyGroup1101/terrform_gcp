@@ -1,9 +1,4 @@
-provider "google" {
-  credentials = var.credential
-  project     = var.project
-  region      = "us-west2"
 
-}
 
 
 # This creates the google instance
