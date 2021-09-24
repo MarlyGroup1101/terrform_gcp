@@ -1,6 +1,4 @@
 
-
-
 # This creates the google instance
 resource "google_compute_instance" "vm_instance" {
 
