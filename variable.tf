@@ -1,8 +1,3 @@
-variable "credentials" {
-  type        = map
-  description = "information about the connection"
-}
-
 variable "project" {
   type        = string
   description = "the actual project"
@@ -18,11 +13,6 @@ variable "image_name" {
   type        = string
   description = "The kind of VM this instance will become"
   default     = "ubuntu-os-cloud/ubuntu-1804-bionic-v20190403"
-}
-
-variable "script_path" {
-  type        = string
-  description = "Where is the path to the script locally on the machine?"
 }
 
 variable "username" {
