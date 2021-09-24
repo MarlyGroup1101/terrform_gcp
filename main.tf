@@ -1,6 +1,6 @@
 provider "google" {
-  credentials = file("service-account2.json")
-  project     = "second-project-325919"
+  credentials = var.credential
+  project     = var.project
   region      = "us-west2"
 
 }
