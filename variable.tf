@@ -1,3 +1,12 @@
+variable "credentials" {
+  type        = map
+  description = "information about the connection"
+}
+
+variable "project" {
+  type        = string
+  description = "the actual project"
+}
 
 variable "machine_size" {
   type        = string
