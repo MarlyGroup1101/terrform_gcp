@@ -1,16 +1,17 @@
-resource "google_compute_instance" "default" {
-  name         = "test"
+resource "google_compute_instance" "dev" {
+  name         = "devserver"
   machine_type = "f1-micro"
-  zone         = "us-west4-b"
-
+   zone        = "us-west4-b"
+  
+  tags         = ["externalssh","webserver"]
+  
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "centos-cloud/centos-7"
     }
   }
-
   network_interface {
     network = "default"
 
+    
   }
-}
