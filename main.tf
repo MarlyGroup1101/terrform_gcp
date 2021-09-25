@@ -1,4 +1,4 @@
-resource "google_compute_instance" "dev" {
+resource "google_compute_instance" "vm_instance" {
   name         = "devserver"
   machine_type = "f1-micro"
    zone        = "us-west4-b"
