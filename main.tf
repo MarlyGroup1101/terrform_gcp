@@ -1,5 +1,5 @@
 resource "google_compute_instance" "vm_instance" {
-  name         = qwerd111"
+  name         = "qwerd111"
   machine_type = "f1-micro"
    zone        = "us-west4-b"
   
