@@ -9,6 +9,9 @@ resource "google_compute_instance" "vm_instance" {
     initialize_params {
       image = "centos-cloud/centos-7"
     }
+    
+  }
+}
 
 #Example Usage - Single User
 resource "google_storage_bucket" "bucket" {
